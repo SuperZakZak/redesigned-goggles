@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .ios-input {
+    @apply w-full px-4 py-3 text-base bg-white border border-gray-200 rounded-ios 
+           focus:outline-none focus:ring-2 focus:ring-ios-blue focus:border-transparent
+           placeholder-ios-gray transition-all duration-200;
+  }
+  
+  .ios-input.error {
+    @apply border-red-500 focus:ring-red-500 animate-shake;
+  }
+  
+  .ios-button {
+    @apply px-6 py-3 text-base font-medium rounded-ios-button transition-all duration-200
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .ios-button-primary {
+    @apply ios-button bg-ios-green text-white shadow-ios-button
+           hover:bg-green-600 active:bg-green-700;
+  }
+  
+  .ios-button-secondary {
+    @apply ios-button bg-gray-100 text-gray-700 border border-gray-200
+           hover:bg-gray-200 active:bg-gray-300;
+  }
+  
+  .wallet-button {
+    @apply flex items-center justify-center px-6 py-4 rounded-ios-button
+           font-medium text-white transition-all duration-200
+           active:scale-95 shadow-ios-button;
+  }
+  
+  .wallet-button-apple {
+    @apply wallet-button bg-black hover:bg-gray-800 active:bg-gray-900;
+  }
+  
+  .wallet-button-google {
+    @apply wallet-button bg-ios-blue hover:bg-blue-600 active:bg-blue-700;
+  }
+  
+  .screen-container {
+    @apply min-h-screen bg-white flex flex-col;
+  }
+  
+  .content-container {
+    @apply flex-1 px-6 py-8 max-w-md mx-auto w-full;
+  }
+  
+  .navigation-header {
+    @apply flex items-center justify-between p-4 bg-white border-b border-gray-100;
+  }
+  
+  .back-button {
+    @apply p-2 -m-2 text-ios-blue hover:bg-gray-50 rounded-lg transition-colors;
+  }
+  
+  .status-bar-spacer {
+    @apply h-11 bg-white;
+  }
+  
+  .qr-container {
+    @apply bg-white p-6 rounded-2xl shadow-ios border border-gray-100;
+  }
+  
+  .success-icon {
+    @apply w-16 h-16 mx-auto mb-4 text-ios-green;
+  }
+  
+  .error-message {
+    @apply text-red-500 text-sm mt-1 animate-fade-in;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full h-6 w-6 border-2 border-gray-300 border-t-ios-blue;
+  }
+}
