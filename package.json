@@ -70,6 +70,13 @@
   },
   "overrides": {
     "redis-memory-server": false,
+    "mongodb-memory-server": false,
+    "glob": "^10.0.0",
+    "rimraf": "^5.0.0",
+    "superagent": "^10.2.2"
+  },
+  "resolutions": {
+    "redis-memory-server": false,
     "mongodb-memory-server": false
   },
   "engines": {
