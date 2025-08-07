@@ -1,0 +1,3 @@
+echo "Dockerfile*
+docker-compose*
+.dockerignore" > .railwayignore
