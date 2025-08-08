@@ -1,25 +1,12 @@
 import React, { useState } from 'react';
 import ModernAdminLayout from './ModernAdminLayout';
 import ModernClientsTable from './ModernClientsTable';
+import { Customer } from '../../services/api';
 
-interface Customer {
-  id: string;
-  name: string;
-  cardNumber: string;
-  phone: string;
-  balance: number;
-  bonus: number;
-  discount: number;
-  telegramBot?: boolean;
-  email?: string;
-  joinDate?: string;
-  totalSpent?: number;
-  totalTransactions?: number;
-}
 
 const ModernAdminPanel: React.FC = () => {
   const [activeTab, setActiveTab] = useState('clients');
-  const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null);
+  const [, setSelectedCustomer] = useState<Customer | null>(null);
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
