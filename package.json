@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/index.ts",
-    "build": "tsc",
+    "build": "tsc && npm --prefix frontend ci && npm --prefix frontend run build",
     "start": "node dist/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -43,6 +43,7 @@
     "module-alias": "^2.2.3",
     "mongoose": "^8.0.3",
     "node-apn": "^3.0.0",
+    "passkit-generator": "^3.1.0",
     "redis": "^4.6.12",
     "uuid": "^9.0.0",
     "winston": "^3.11.0"

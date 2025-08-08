@@ -32,6 +32,8 @@ RUN adduser --system --uid 1001 loy
 COPY --from=builder --chown=loy:nodejs /app/dist ./dist
 COPY --from=deps --chown=loy:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=loy:nodejs /app/package.json ./package.json
+# Copy built frontend (served from frontend/dist)
+COPY --from=builder --chown=loy:nodejs /app/frontend/dist ./frontend/dist
 
 # Create logs directory
 RUN mkdir -p logs && chown loy:nodejs logs
