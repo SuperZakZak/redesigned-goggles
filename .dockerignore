@@ -23,8 +23,8 @@ certificates
 *.p12
 *.key
 *.crt
-*.json
 *.pkpass
+certificates/*.json
 
 # VCS and editor
 .git
